@@ -6,7 +6,7 @@ sheet_meta <- gs_key("1PK4L9iS4tZzQvKlhQxtntJOAUaFH9kytTp5EFb8Ustk", lookup = FA
 pre_data <- gs_read(sheet_meta, ws = "Pre", col_names = TRUE, skip = 0, verbose = TRUE, literal = FALSE)
 post_data <- gs_read(sheet_meta, ws = "Post", col_names = TRUE, skip = 0, verbose = TRUE, literal = FALSE)
 
-all_data <- bind_rows(pre_data, post_data) 
+all_data <- bind_rows(pre_data, post_data)    
 
 likert_data <- all_data %>%
   select(husbandry_rank:pre_post) %>% 
